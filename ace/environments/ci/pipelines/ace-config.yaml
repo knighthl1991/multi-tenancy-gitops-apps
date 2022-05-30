@@ -54,8 +54,8 @@ spec:
       workspaces:
         - name: output
           workspace: shared-workspace
-        # - name: ssh-directory
-        #   workspace: ace-config-repo-secret
+        - name: ssh-directory
+          workspace: ace-config-repo-secret
 
     - name: clone-is-infra-repo
       params:
@@ -71,8 +71,8 @@ spec:
       workspaces:
         - name: output
           workspace: shared-workspace
-        # - name: ssh-directory
-        #   workspace: ace-infra-repo-secret
+        - name: ssh-directory
+          workspace: ace-infra-repo-secret
 
     - name: clone-gitops-repo
       params:
@@ -88,8 +88,8 @@ spec:
       workspaces:
         - name: output
           workspace: shared-workspace
-        # - name: ssh-directory
-        #   workspace: gitops-repo-secret
+        - name: ssh-directory
+          workspace: gitops-repo-secret
 
     - name: resolve-props
       params:
