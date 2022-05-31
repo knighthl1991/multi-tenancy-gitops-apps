@@ -35,9 +35,9 @@ spec:
 
   workspaces:
     - name: shared-workspace
-    - name: ace-config-repo-secret
-    - name: ace-infra-repo-secret
-    - name: gitops-repo-secret
+    - name: ace-config-repo-secret1
+    - name: ace-infra-repo-secret1
+    - name: gitops-repo-secret1
 
   tasks:
     - name: clone-is-config-repo
@@ -55,7 +55,7 @@ spec:
         - name: output
           workspace: shared-workspace
         - name: ssh-directory
-          workspace: ace-config-repo-secret
+          workspace: ace-config-repo-secret1
 
     - name: clone-is-infra-repo
       params:
@@ -72,7 +72,7 @@ spec:
         - name: output
           workspace: shared-workspace
         - name: ssh-directory
-          workspace: ace-infra-repo-secret
+          workspace: ace-infra-repo-secret1
 
     - name: clone-gitops-repo
       params:
@@ -89,7 +89,7 @@ spec:
         - name: output
           workspace: shared-workspace
         - name: ssh-directory
-          workspace: gitops-repo-secret
+          workspace: gitops-repo-secret1
 
     - name: resolve-props
       params:
@@ -145,7 +145,7 @@ spec:
         - name: workspace
           workspace: shared-workspace
         - name: ssh-directory
-          workspace: gitops-repo-secret
+          workspace: gitops-repo-secret1
     - name: create-pull-request
       taskRef:
         kind: Task
