@@ -7,18 +7,22 @@ spec:
     - name: is-config-repo-url
       type: string
       description: "SSH url of Configuration repository, ex: git@github.com:ace-prod-ref/ace-config.git"
+      default: https://github.com/knighthl1991/ace-config.git
 
     - name: is-infra-repo-url
       type: string
       description: "SSH url of Infrastructure repository, ex: git@github.com:ace-prod-ref/ace-infra.git"
+      default: https://github.com/knighthl1991/ace-infra.git
 
     - name: git-ops-repo-url
       type: string
       description: "SSH url of GitOps repository, ex: git@github.com:ace-prod-ref/multi-tenancy-gitops-apps.git"
+      default: https://github.com/knighthl1991/multi-tenancy-gitops-apps.git
 
     - name: gitops-apps-repo-full-name
       type: string
       description: "Repo name of GitOps repository, in github.com, ex: ace-prod-ref/multi-tenancy-gitops-apps"
+      default: knighthl1991/multi-tenancy-gitops-apps
 
     - name: github-pr-title
       type: string
@@ -54,8 +58,8 @@ spec:
       workspaces:
         - name: output
           workspace: shared-workspace
-        - name: ssh-directory
-          workspace: ace-config-repo-secret
+        # - name: ssh-directory
+        #   workspace: ace-config-repo-secret
 
     - name: clone-is-infra-repo
       params:
@@ -71,8 +75,8 @@ spec:
       workspaces:
         - name: output
           workspace: shared-workspace
-        - name: ssh-directory
-          workspace: ace-infra-repo-secret
+        # - name: ssh-directory
+        #   workspace: ace-infra-repo-secret
 
     - name: clone-gitops-repo
       params:
@@ -88,8 +92,8 @@ spec:
       workspaces:
         - name: output
           workspace: shared-workspace
-        - name: ssh-directory
-          workspace: gitops-repo-secret
+        # - name: ssh-directory
+        #   workspace: gitops-repo-secret
 
     - name: resolve-props
       params:
@@ -144,8 +148,8 @@ spec:
       workspaces:
         - name: workspace
           workspace: shared-workspace
-        - name: ssh-directory
-          workspace: gitops-repo-secret
+        # - name: ssh-directory
+        #   workspace: gitops-repo-secret
     - name: create-pull-request
       taskRef:
         kind: Task
