@@ -34,7 +34,11 @@ spec:
       description: "Personal access token for CICD bot user"
 
   workspaces:
+    - name: shared-workspace
     - name: ace-config-repo-secret
+    - name: ace-infra-repo-secret
+    - name: gitops-repo-secret
+      optional: true
 
   tasks:
     - name: clone-is-config-repo
