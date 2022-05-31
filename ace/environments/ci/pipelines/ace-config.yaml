@@ -34,10 +34,7 @@ spec:
       description: "Personal access token for CICD bot user"
 
   workspaces:
-    - name: shared-workspace
-    - name: ace-config-repo-secret1
-    - name: ace-infra-repo-secret1
-    - name: gitops-repo-secret1
+    - name: ace-config-repo-secret
 
   tasks:
     - name: clone-is-config-repo
@@ -55,7 +52,7 @@ spec:
         - name: output
           workspace: shared-workspace
         - name: ssh-directory
-          workspace: ace-config-repo-secret1
+          workspace: ace-config-repo-secret
 
     - name: clone-is-infra-repo
       params:
@@ -72,7 +69,7 @@ spec:
         - name: output
           workspace: shared-workspace
         - name: ssh-directory
-          workspace: ace-infra-repo-secret1
+          workspace: ace-infra-repo-secret
 
     - name: clone-gitops-repo
       params:
@@ -89,7 +86,7 @@ spec:
         - name: output
           workspace: shared-workspace
         - name: ssh-directory
-          workspace: gitops-repo-secret1
+          workspace: gitops-repo-secret
 
     - name: resolve-props
       params:
@@ -145,7 +142,7 @@ spec:
         - name: workspace
           workspace: shared-workspace
         - name: ssh-directory
-          workspace: gitops-repo-secret1
+          workspace: gitops-repo-secret
     - name: create-pull-request
       taskRef:
         kind: Task
