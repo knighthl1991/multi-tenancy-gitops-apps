@@ -38,10 +38,10 @@ resources:
 # - tasks/10-gitops.yaml
 # - tasks/11-update-image.yaml
 # - tasks/12-argo-tests.yaml
-# - tasks/ace-tasks.yaml
+- tasks/ace-tasks.yaml
 # - tasks/build-bar.yaml
 # - tasks/build-is.yaml
-- tasks/create-config.yaml
+# - tasks/create-config.yaml
 # - tasks/custom-buildah.yaml
 # - tasks/functional-test-task.yaml
 - tasks/github-open-pr.yaml
