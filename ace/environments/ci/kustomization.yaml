@@ -38,17 +38,17 @@ resources:
 # - tasks/10-gitops.yaml
 # - tasks/11-update-image.yaml
 # - tasks/12-argo-tests.yaml
-- tasks/ace-tasks.yaml
+# - tasks/ace-tasks.yaml
 # - tasks/build-bar.yaml
 # - tasks/build-is.yaml
-# - tasks/create-config.yaml
+- tasks/create-config.yaml
 # - tasks/custom-buildah.yaml
 # - tasks/functional-test-task.yaml
 - tasks/github-open-pr.yaml
 # - tasks/gitops-ace.yaml
 # - tasks/ibm-gitops-for-ace-task.yaml
 # - tasks/ibm-jmeter-performance-test.yaml
-# - tasks/resolve-props.yaml
+- tasks/resolve-props.yaml
 # - triggerbindings/ace-integration-server.yaml
 # - triggertemplates/ace-integration-server.yaml
 - secrets/github-user-token-secret-cicd-acme.yaml
