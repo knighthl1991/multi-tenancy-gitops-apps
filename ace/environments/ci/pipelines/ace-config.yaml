@@ -167,4 +167,3 @@ spec:
           value: $(params.github-pr-body)
         - name: GITHUB_TOKEN_SECRET_NAME
           value: $(params.github-pr-token-secret-name)
-
